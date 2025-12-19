@@ -5,7 +5,9 @@ Implement a function that takes 2 positive integers and returns the sum of every
 ```javascript
 sumAll(1, 4) // returns the sum of 1 + 2 + 3 + 4 which is 10
 ```
-
+for que sume uno después del "A" hasta el "B"
+guardarlos todos en un array con push desde A hasta B
+usar reduce para sumar todo
 
 ## Hints
 
