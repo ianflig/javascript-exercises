@@ -26,7 +26,7 @@ describe("contains", () => {
     expect(contains(object, 44)).toBe(true);
   });
 
-  test.skip("true if the provided string is a value within the object", () => {
+  test("true if the provided string is a value within the object", () => {
     expect(contains(object, "foo")).toBe(true);
   });
 
