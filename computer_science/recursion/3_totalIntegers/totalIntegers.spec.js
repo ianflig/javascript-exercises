@@ -34,7 +34,7 @@ describe("totalIntegers", () => {
     ).toBe(14);
   });
 
-  test.skip("Does not count non-integer numbers", () => {
+  test("Does not count non-integer numbers", () => {
     expect(
       totalIntegers([
         5,
