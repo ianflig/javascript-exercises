@@ -42,7 +42,7 @@ describe("contains", () => {
     expect(contains(object, "e")).toBe(true);
   });
 
-  test.skip("true if the object contains the same object by reference", () => {
+  test("true if the object contains the same object by reference", () => {
     expect(contains(object, meaningOfLifeArray)).toBe(true);
   });
 
