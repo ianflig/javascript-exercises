@@ -34,7 +34,7 @@ describe("contains", () => {
     expect(contains(object, "44")).toBe(false);
   });
 
-  test.skip("false if the provided string is not a value within the object", () => {
+  test("false if the provided string is not a value within the object", () => {
     expect(contains(object, "bar")).toBe(false);
   });
 
