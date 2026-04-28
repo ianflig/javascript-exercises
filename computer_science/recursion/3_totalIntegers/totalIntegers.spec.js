@@ -9,7 +9,7 @@ describe("totalIntegers", () => {
     expect(totalIntegers([1, 2, "3", 4])).toBe(3);
   });
 
-  test.skip("Counts all integers in a plain object", () => {
+  test("Counts all integers in a plain object", () => {
     expect(totalIntegers({ a: 1, b: "2", c: 3 })).toBe(2);
   });
 
