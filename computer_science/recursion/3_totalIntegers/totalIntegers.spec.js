@@ -17,7 +17,7 @@ describe("totalIntegers", () => {
     expect(totalIntegers([[], [], []])).toBe(0);
   });
 
-  test.skip("Counts integers in deeply nested arrays", () => {
+  test("Counts integers in deeply nested arrays", () => {
     expect(totalIntegers([[[[[[[[[[[[[[4]]]]]], 246]]]]]]]])).toBe(2);
   });
 
