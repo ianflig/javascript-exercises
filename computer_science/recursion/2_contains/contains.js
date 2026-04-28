@@ -1,11 +1,12 @@
 const contains = function (obj, value) {
-  if (obj === value) {
+  if (obj === value || (Number.isNaN(obj) && Number.isNaN(value))) {
     return true;
   }
+
   if (typeof obj !== "object" || obj === null) {
     return false;
   }
-  //   console.log(obj);
+  // console.log(obj);
   for (let object of Object.values(obj)) {
     // console.log("--------------");
     // console.log("INSIDE LOOP");
@@ -23,16 +24,31 @@ const contains = function (obj, value) {
 
 // Do not edit below this line
 module.exports = contains;
+
+console.log(
+  contains(
+    {
+      test: { test: 44 },
+      array: {
+        arrayinside: [42],
+        anotherButWithString: ["45"],
+        anotherObj: { empty: null, car: NaN, yes: "yes" },
+      },
+    },
+    NaN,
+  ),
+);
+
 // console.log(
-//   contains(
-//     {
-//       test: { test: 44 },
-//       array: {
-//         arrayinside: [42],
-//         anotherButWithString: ["45"],
-//         anotherObj: { empty: null, car: "yes" },
-//       },
+//   typeof NaN,
+//   NaN === NaN,
+//   Number.isNaN({
+//     test: { test: 44 },
+//     array: {
+//       arrayinside: [42],
+//       anotherButWithString: ["45"],
+//       anotherObj: { empty: null, car: NaN, yes: "yes" },
 //     },
-//     "null",
-//   ),
+//   }),
+//   Number.isNaN("d"),
 // );
