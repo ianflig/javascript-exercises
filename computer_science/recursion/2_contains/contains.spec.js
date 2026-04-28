@@ -30,7 +30,7 @@ describe("contains", () => {
     expect(contains(object, "foo")).toBe(true);
   });
 
-  test.skip("does not convert input string into a number when searching for a value within the object", () => {
+  test("does not convert input string into a number when searching for a value within the object", () => {
     expect(contains(object, "44")).toBe(false);
   });
 
