@@ -46,7 +46,7 @@ describe("contains", () => {
     expect(contains(object, meaningOfLifeArray)).toBe(true);
   });
 
-  test.skip("false if no matching object reference", () => {
+  test("false if no matching object reference", () => {
     expect(contains(object, [42])).toBe(false);
   });
 
