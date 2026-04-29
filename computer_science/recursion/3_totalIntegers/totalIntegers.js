@@ -1,5 +1,5 @@
 const totalIntegers = function (obj) {
-  if (typeof obj !== "object") return;
+  if (typeof obj !== "object" || obj === null) return;
 
   let total = 0;
   for (let number of Object.values(obj)) {
@@ -13,24 +13,6 @@ const totalIntegers = function (obj) {
   return total;
 };
 
-// const totalIntegers = function (obj) {
-//   if (Array.isArray(obj)) {
-//     let total = 0;
-//     return obj.map((element) => {
-//       if (typeof element === "number") {
-//         return total++;
-//       }
-//     });
-//   } else {
-//     let total = 0;
-//     for (let number of Object.values(obj)) {
-//       total += totalIntegers(number);
-//     }
-//     return total;
-//   }
-// };
-
-// Do not edit below this line
 module.exports = totalIntegers;
 
 // console.log(totalIntegers(42));
@@ -39,4 +21,16 @@ module.exports = totalIntegers;
 // console.log(totalIntegers([[[5], 3], 0, 2, ["foo"], [], [4, [5, 6]]])); // returns 7
 // console.log(totalIntegers({ a: 1, b: { a: [5, 10], b: 11 } })); // returns 4
 
-// console.log(test, test.length);
+console.log(
+  totalIntegers([
+    NaN,
+    [[{}], 555],
+    "444",
+    [],
+    74.0,
+    undefined,
+    [[() => {}], [4], Infinity, [[[], -44.0], [null, "-4"], NaN[[]], 6]],
+    () => {},
+    [[], [-Infinity, ["4"], [4.7, -46.7], NaN]],
+  ]),
+);
