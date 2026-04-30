@@ -1,15 +1,15 @@
-const permutations = function (obj) {
-  //   if (obj.length === 2) {
-  //     return [obj[1], obj[0]];
-  //   } else {
-  //     let newArray = [];
-  //     for (let i = 0; i < obj.length; i++) {
-  //       let fixedArr = newArray.push(obj);
-  //       newArray.push(permutations(obj));
-  //     }
-  //   }
-  //   return newArray;
-};
+// const permutations = function (obj) {
+//   if (obj.length === 2) {
+//     return [obj[1], obj[0]];
+//   } else {
+//     let newArray = [];
+//     for (let i = 0; i < obj.length; i++) {
+//       let fixedArr = newArray.push(obj);
+//       newArray.push(permutations(obj));
+//     }
+//   }
+//   return newArray;
+// };
 
 // Do not edit below this line
 module.exports = permutations;
