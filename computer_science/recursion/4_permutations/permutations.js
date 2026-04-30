@@ -3,7 +3,7 @@ function permutations(array) {
     return [[]];
   }
   if (array.length === 1) {
-    return array;
+    return [array];
   }
 
   let result = [];
