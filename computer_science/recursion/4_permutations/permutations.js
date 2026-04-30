@@ -1,33 +1,26 @@
-// const permutations = function (obj) {
-//   if (obj.length === 2) {
-//     return [obj[1], obj[0]];
-//   } else {
-//     let newArray = [];
-//     for (let i = 0; i < obj.length; i++) {
-//       let fixedArr = newArray.push(obj);
-//       newArray.push(permutations(obj));
-//     }
-//   }
-//   return newArray;
-// };
+function permutations(array) {
+  if (array.length === 0) {
+    return [[]];
+  }
+  if (array.length === 1) {
+    return array;
+  }
+
+  let result = [];
+
+  for (let i = 0; i < array.length; i++) {
+    const currentValue = [array[i]];
+    const remainingValues = array.slice(0, i).concat(array.slice(i + 1));
+    const valuesPermuted = permutations(remainingValues);
+    for (let j = 0; j < valuesPermuted.length; j++) {
+      const permutedArray = currentValue.concat(valuesPermuted[j]);
+      result.push(permutedArray);
+    }
+  }
+  return result;
+}
 
 // Do not edit below this line
 module.exports = permutations;
 
-// const obj = [1, 2, 3];
-// let slicedArr1 = obj.slice(1, 2);
-// console.log(slicedArr1);
-// let slicedArr2 = obj.slice(1, obj.length);
-// console.log(slicedArr2);
-// let newArray = slicedArr1.concat(slicedArr2);
-
-// console.log(newArray, obj);
-
-// console.log(permutations(obj));
-
-// let newArray = [obj[1], obj[0]];
-// console.log(newArray);
-
-// for (let i = 0; i < obj.length; i++) {
-//   array = obj.splice([i]);
-// }
+console.log(permutations([]));
