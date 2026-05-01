@@ -22,5 +22,3 @@ function permutations(array) {
 
 // Do not edit below this line
 module.exports = permutations;
-
-console.log(permutations([]));
